@@ -15,24 +15,26 @@ for page_num in range(document.page_count):
     # Define a regex pattern to match the vendor and booth number
     # The pattern looks for a vendor name followed by periods and then a booth number
     exhibit_hall_pattern = re.compile(r'(.+?)\s*\.+\s*(\d+(?:, \d+)*)')
+    
 
     # Extract matches from the page text
     exhibit_hall_matches = exhibit_hall_pattern.findall(text)
     
     for match in exhibit_hall_matches:
         vendor_name = match[0].strip()
+        print(match)
         booth_number = match[1].strip()
         vendor_booth_data.append([vendor_name, booth_number])
 
     # If needed, handle sponsor section separately with its own pattern
-    sponsor_pattern = re.compile(r'(.+?)\s*\.+\s*([A-Za-z]+(?: [A-Za-z]+)* \d+(?:-\d+)?|[A-Za-z]+(?: [A-Za-z]+)*)')
+    # sponsor_pattern = re.compile(r'(.+?)\s*\.+\s*([A-Za-z]+(?: [A-Za-z]+)* \d+(?:-\d+)?|[A-Za-z]+(?: [A-Za-z]+)*)')
     
-    sponsor_matches = sponsor_pattern.findall(text)
+    # sponsor_matches = sponsor_pattern.findall(text)
     
-    for match in sponsor_matches:
-        sponsor_name = match[0].strip()
-        location = match[1].strip()
-        vendor_booth_data.append([sponsor_name, location])
+    # for match in sponsor_matches:
+    #     sponsor_name = match[0].strip()
+    #     location = match[1].strip()
+    #     vendor_booth_data.append([sponsor_name, location])
 
 # Convert to DataFrame
 df = pd.DataFrame(vendor_booth_data, columns=["Vendor/Sponsor", "Booth/Location"])
