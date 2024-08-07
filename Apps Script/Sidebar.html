@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base target="_top">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: "Roboto", sans-serif;
+            font-size: 12px;
+        }
+
+        #fileList {
+            margin-top: 10px;
+        }
+
+        .file-item {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .thumbnail {
+            max-width: 100px;
+            max-height: 100px;
+            display: block;
+            margin-right: 10px;
+        }
+
+        .dropdown {
+            margin-left: 10px;
+        }
+
+        .button {
+            padding: 5px 10px;
+            border: none;
+            color: black;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        input[type=file]::file-selector-button {
+
+            padding: 5px 10px;
+            border: none;
+            color: black;
+            cursor: pointer;
+            margin: 5px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <form id="uploadForm">
+        <label for="fileInput" class="fileInput2">Select images:</label>
+        <input type="file" id="fileInput" accept="image/*" multiple onchange="displaySelectedFiles()"><br><br>
+
+        <div id="fileList"></div>
+
+        <input type="button" value="Upload and Insert" class="button" onclick="uploadAndInsertImages()">
+    </form>
+    <script>
+        let files = [];
+        let names = [];
+
+        function displaySelectedFiles() {
+            const fileInput = document.getElementById('fileInput');
+            const fileList = document.getElementById('fileList');
+            files = Array.from(fileInput.files);
+
+            fileList.innerHTML = ''; // Clear previous list
+
+            files.forEach((file, index) => {
+                const fileItem = document.createElement('div');
+                fileItem.className = 'file-item';
+
+                // Display file thumbnail
+                const fileReader = new FileReader();
+                fileReader.onload = function (e) {
+                    const thumbnail = document.createElement('img');
+                    thumbnail.src = e.target.result;
+                    thumbnail.className = 'thumbnail';
+                    fileItem.appendChild(thumbnail);
+                };
+                fileReader.readAsDataURL(file);
+
+                // Create dropdown for names
+                const dropdown = document.createElement('select');
+                dropdown.className = 'dropdown';
+                names.forEach(name => {
+                    const option = document.createElement('option');
+                    option.value = name;
+                    option.textContent = name;
+                    dropdown.appendChild(option);
+                });
+                fileItem.appendChild(dropdown);
+
+                fileList.appendChild(fileItem);
+            });
+        }
+
+        function uploadAndInsertImages() {
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            if (files.length === 0) {
+                alert('Please select files first.');
+                return;
+            }
+
+            if (dropdowns.length === 0 || dropdowns.length !== files.length) {
+                alert('Please select a name for each file.');
+                return;
+            }
+
+            files.forEach((file, index) => {
+                const fileName = dropdowns[index].value;
+                if (!fileName) {
+                    alert('All files must have a name selected.');
+                    return;
+                }
+
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const imageBase64 = e.target.result.split(',')[1];
+                    google.script.run.uploadImageToDrive(imageBase64, fileName);
+                };
+                reader.readAsDataURL(file);
+            });
+        }
+
+        function getNamesFromSheet() {
+            google.script.run.withSuccessHandler(function (namesFromSheet) {
+                names = namesFromSheet;
+                displaySelectedFiles(); // Redraw file list with names after fetching
+            }).fetchNamesFromSheet();
+        }
+
+        window.onload = getNamesFromSheet;
+    </script>
+</body>
+
+</html>
