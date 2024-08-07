@@ -16,14 +16,12 @@ for page_num in range(document.page_count):
     # The pattern looks for a vendor name followed by periods and then a booth number
     exhibit_hall_pattern = re.compile(r'(.+?)\s*\.+\s*(\d+(?:, \d+)*)')
     
-
     # Extract matches from the page text
     exhibit_hall_matches = exhibit_hall_pattern.findall(text)
     
     for match in exhibit_hall_matches:
         vendor_name = match[0].strip()
         trailing_period = re.sub(r'\.\s*$', '', vendor_name)
-        
         booth_number = match[1].strip()
         vendor_booth_data.append([trailing_period, booth_number])
 
