@@ -22,7 +22,7 @@ for pdf_filename in os.listdir(pdf_folder_path):
         pdf_path = os.path.join(pdf_folder_path, pdf_filename)
         document = fitz.open(pdf_path)
 
-
+ 
     vendor_booth_data = []
 
     for page_num in range(document.page_count):
