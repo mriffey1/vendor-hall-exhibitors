@@ -2,14 +2,11 @@
 <a name="readme-top"></a>
 
 <h1 align="center">Exhibitor List</h1>
-    This script takes the Exhibitor list and converts it to an excel format.
+    This script takes the Gen Con Exhibitor maps, extracts the vendor/booth number, then adds the data to a google sheet with each map as a new tab.
     <br />
-    <br />
+<br />
 
-## IN PROGRESS
-This readme document is in progress and is not yet complete.
-
-<!-- 
+<!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -37,11 +34,20 @@ This readme document is in progress and is not yet complete.
 
 
 
+
+
+
+
+
+<!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<div align="center">
+<img src="Assets/map-to-sheets.png" width="100%">
+</div>
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+
+Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `mriffey1`, `vendor-hall-exhibitors`, `mriffey1`, `mriffey1`, `mriffey1@gmail.com_client`, `mriffey1@gmail.com`, `project_title`, `project_description`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -65,6 +71,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 
 
+<!-- GETTING STARTED -->
 ## Getting Started
 
 This is an example of how you may give instructions on setting up your project locally.
@@ -73,17 +80,19 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* npm
+* Generate a service account key json at <a href="https://console.cloud.google.com/">Google Cloud Console</a>
+* Python 3.11.2
+* To install the necessary packages, run:
   ```sh
-  npm install npm@latest -g
+  pip install -r requirements.txt
   ```
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
+1. Generate a service account key json at https://console.cloud.google.com/
 2. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/mriffey1/vendor-hall-exhibitors.git
    ```
 3. Install NPM packages
    ```sh
@@ -98,6 +107,7 @@ This is an example of how to list things you need to use the software and how to
 
 
 
+<!-- USAGE EXAMPLES -->
 ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
@@ -108,6 +118,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 
 
+<!-- ROADMAP -->
 ## Roadmap
 
 - [ ] Feature 1
@@ -115,12 +126,13 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Feature 3
     - [ ] Nested Feature
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/mriffey1/vendor-hall-exhibitors/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
+<!-- CONTRIBUTING -->
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -138,6 +150,7 @@ Don't forget to give the project a star! Thanks again!
 
 
 
+<!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
@@ -146,16 +159,18 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 
+<!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Your Name - [@mriffey1](https://twitter.com/mriffey1) - mriffey1@gmail.com@mriffey1@gmail.com_client.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/mriffey1/vendor-hall-exhibitors](https://github.com/mriffey1/vendor-hall-exhibitors)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
+<!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
 * []()
@@ -166,18 +181,20 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 
 
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/mriffey1/vendor-hall-exhibitors.svg?style=for-the-badge
+[contributors-url]: https://github.com/mriffey1/vendor-hall-exhibitors/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/mriffey1/vendor-hall-exhibitors.svg?style=for-the-badge
+[forks-url]: https://github.com/mriffey1/vendor-hall-exhibitors/network/members
+[stars-shield]: https://img.shields.io/github/stars/mriffey1/vendor-hall-exhibitors.svg?style=for-the-badge
+[stars-url]: https://github.com/mriffey1/vendor-hall-exhibitors/stargazers
+[issues-shield]: https://img.shields.io/github/issues/mriffey1/vendor-hall-exhibitors.svg?style=for-the-badge
+[issues-url]: https://github.com/mriffey1/vendor-hall-exhibitors/issues
+[license-shield]: https://img.shields.io/github/license/mriffey1/vendor-hall-exhibitors.svg?style=for-the-badge
+[license-url]: https://github.com/mriffey1/vendor-hall-exhibitors/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://linkedin.com/in/mriffey1
 [product-screenshot]: images/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
@@ -194,4 +211,4 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com  -->
+[JQuery-url]: https://jquery.com 
