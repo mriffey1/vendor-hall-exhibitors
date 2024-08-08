@@ -65,7 +65,6 @@ At this moment - the script does **not** support the sponsors listed but the fea
 ![Cloud](https://img.shields.io/badge/Google_Sheets-%2334A853.svg?style=for-the-badge&logo=googlesheets&logoColor=white)
 
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
