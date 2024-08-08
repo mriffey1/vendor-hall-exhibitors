@@ -43,7 +43,7 @@
 ## About The Project
 
 <div align="center">
-<img src="Assets/map-to-sheets.png" width="100%">
+<img src="Assets/map-to-sheets.png" width="75%">
 </div>
 
 
