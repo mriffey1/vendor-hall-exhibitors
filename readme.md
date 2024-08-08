@@ -47,8 +47,7 @@
 </div>
 
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `mriffey1`, `vendor-hall-exhibitors`, `mriffey1`, `mriffey1`, `mriffey1@gmail.com_client`, `mriffey1@gmail.com`, `project_title`, `project_description`
-
+This project was designed to take the vendor and their associated booth numbers from the Exhibit Hall map and put them into a Google Sheet. Currently, Gen Con does not have a method to filter/export for specific vendors or booth easily and this script was designed to make it easier. 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
