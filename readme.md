@@ -2,6 +2,9 @@
 <a name="readme-top"></a>
 
 <h1 align="center">Exhibitor List</h1>
+<div align="center">
+<img src="Assets/map-to-sheets.png" width="85%">
+</div>
     This script takes the Gen Con Exhibitor maps, extracts the vendor/booth number, then adds the data to a google sheet with each map as a new tab.
     <br />
 <br />
@@ -36,9 +39,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<div align="center">
-<img src="Assets/map-to-sheets.png" width="85%">
-</div>
+
 
 This project was designed to take the vendor and their associated booth numbers from the Exhibit Hall map and put them into a Google Sheet. Currently, Gen Con does not have a method to filter/export for specific vendors or booth easily and this script was designed to make it easier. 
 
