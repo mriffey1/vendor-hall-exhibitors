@@ -80,29 +80,20 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* Generate a service account key json at <a href="https://console.cloud.google.com/">Google Cloud Console</a>
-* Python 3.11.2
-* To install the necessary packages, run:
-  ```sh
-  pip install -r requirements.txt
-  ```
+* Python
 
 ### Installation
 
-1. Generate a service account key json at https://console.cloud.google.com/
-2. Clone the repo
+1. Clone the repo
    ```sh
    git clone https://github.com/mriffey1/vendor-hall-exhibitors.git
    ```
-3. Install NPM packages
+2. Generate a service account key json at <a href="https://console.cloud.google.com/">Google Cloud Console</a>
+3. Save the json file as sheet.json
+4. Install required packages
    ```sh
-   npm install
+   pip install -r requirements.txt
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
