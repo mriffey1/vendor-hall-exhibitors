@@ -1,4 +1,4 @@
-import fitz
+import pymupdf
 import pandas as pd
 import re
 import gspread
@@ -51,7 +51,7 @@ def update_google_sheet(worksheet, df):
 
 def process_pdf(pdf_filename):
     pdf_path = os.path.join(map_path, pdf_filename)
-    document = fitz.open(pdf_path)
+    document = pymupdf.open(pdf_path)
     df = extract_vendor_booth_data(document)
 
     worksheet_title = pdf_filename.split('.')[0]
