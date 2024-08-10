@@ -76,16 +76,20 @@ This is an example of how to list things you need to use the software and how to
    git clone https://github.com/mriffey1/vendor-hall-exhibitors.git
    ```
 2. Generate a service account key json at <a href="https://console.cloud.google.com/">Google Cloud Console</a>
-3. Save the json file as sheet.json
+3. Save the json file as **sheet.json**
 4. Install required packages
    ```sh
    pip install -r requirements.txt
    ```
+5. Rename the **.env-sample** to **.env**
+6. In the .env file, update **MAIN_FOLDER_PATH** with the directory's path
+7. Also update the link to **GOOGLE_WORKBOOK** that you wish to put the data in
+8. Ensure you have given the service account access to the spreadsheet by sharing and giving the email address associated with the service account, Edit access
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ## Usage
-1. To run the script, navigate to the directory with vendor_hall.py
+1. To run the script, navigate to the directory with vendor_hall.py and use the following terminal command
    ```sh
    python vendor_hall.py
    ```
