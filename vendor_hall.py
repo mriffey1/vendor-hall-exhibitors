@@ -2,7 +2,7 @@ import pymupdf
 import pandas as pd
 import re
 import gspread
-from oauth2client.service_account import ServiceAccountCredentials
+from google.oauth2.service_account import Credentials
 import os
 from dotenv import load_dotenv
 
@@ -17,8 +17,8 @@ map_path = os.path.join(folder_path, os.getenv("MAP_DIRECTORY_NAME"))
 # Google Sheets API setup
 def initialize_gspread():
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-    creds = ServiceAccountCredentials.from_json_keyfile_name(
-        os.path.join(folder_path, service_account_creds), scope
+    creds = Credentials.from_service_account_file(
+        os.path.join(folder_path, service_account_creds), scopes=scope
     )
     return gspread.authorize(creds)
 
