@@ -1,6 +1,7 @@
 import pytest
 from unittest.mock import patch, MagicMock
 import os
+from vendor_hall import process_pdf
 
 # Mock environment variables
 @patch.dict(os.environ, {
