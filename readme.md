@@ -26,7 +26,7 @@ Table of Contents
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
-- [Roadmap](#roadmap)
+- [Features](#features)
 
 </details>
 
