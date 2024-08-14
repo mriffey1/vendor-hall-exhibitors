@@ -63,6 +63,7 @@ In order to use the script, Python must be installed.
    git clone https://github.com/mriffey1/vendor-hall-exhibitors.git
    ```
 2. Generate a service account key json at <a href="https://console.cloud.google.com/">Google Cloud Console</a>
+> For detailed instructions on how to create a service account, please visit [For Bots: Using Service Account](https://docs.gspread.org/en/v6.1.2/oauth2.html#for-bots-using-service-account)
 3. Save the json file as **sheet.json**
 4. Install required packages
    ```sh
