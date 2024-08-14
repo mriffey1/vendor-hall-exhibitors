@@ -86,7 +86,8 @@ In order to use the script, Python must be installed.
 
 
 
-## Roadmap
+## Features
 - [ ] Adding Sponsor names and booth locations
+- [ ] Creating option for Google Sheets or Excel file
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
