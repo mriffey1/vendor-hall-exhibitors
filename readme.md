@@ -55,7 +55,7 @@ To get a local copy up and running see the following steps.
 
 ### Prerequisites
 In order to use the script, Python must be installed. 
-* Python
+* Python 3.9+
 
 ### Installation
 1. Clone the repo
