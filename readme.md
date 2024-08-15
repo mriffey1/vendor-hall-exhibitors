@@ -33,7 +33,11 @@ Table of Contents
 ## About The Project
 This project was designed to take the vendor and their associated booth numbers from the Exhibit Hall map and put them into a Google Sheet. Currently, Gen Con does not have a method to filter/export for specific vendors or booth easily and this script was designed to make it easier. 
 
-> **Note:** At this moment, the script does **not** support the sponsors listed, but the feature is coming.
+
+> [!NOTE]  
+> At this moment, the script does **not** support the sponsors listed, but the feature is coming.
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
