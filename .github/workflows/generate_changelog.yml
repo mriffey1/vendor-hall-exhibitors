@@ -16,7 +16,7 @@ jobs:
     - name: Generate Changelog
       uses: smichard/conventional_changelog@2.0.0
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.ACTION_TOKEN }}
 
     - name: Set Git User Info
       run: |
