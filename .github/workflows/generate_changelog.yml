@@ -16,12 +16,12 @@ jobs:
     - name: Generate Changelog
       uses: smichard/conventional_changelog@2.0.0
       with:
-        GITHUB_TOKEN: ${{ secrets.ACTION_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Set Git User Info
       run: |
-        git config user.name 'GitHub Actions Bot'
-        git config user.email 'actions@github.com'
+        git config user.name 'mriffey1'
+        git config user.email 'akiraka@gmail.com'
 
     - name: Commit Changelog
       run: |
