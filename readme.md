@@ -84,7 +84,7 @@ In order to use the script, Python must be installed.
 ## Usage
 1. To run the script, navigate to the directory with vendor_hall.py and use the following terminal command
    ```sh
-   python vendor_hall.py
+   python main.py
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
